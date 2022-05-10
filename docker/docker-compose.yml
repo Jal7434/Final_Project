@@ -1,0 +1,18 @@
+ ---
+ version: '3'
+ services:
+     redis:
+         image: redis:latest
+         container_name: hannahmarques-redis
+         ports:
+             - 6418:6379
+         volumes:
+             - ./config/redis.conf:/redis.conf
+         command: [ "redis-server", "/redis.conf" ]
+     web:
+        build: .
+        container_name: hannahm-web
+        ports:
+           - 5018:5000
+        volumes:
+           - ./data/data_file.json:/datafile.json
