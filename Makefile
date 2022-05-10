@@ -1,10 +1,10 @@
 NAME = hannahmarques
 APP = resources-predictions
-VER=0.1
-RPORT=6418
-FPORT=5018
-UID=876512
-GID=816966
+VER = 0.1
+RPORT = 6418
+FPORT = 5018
+UID = 876512
+GID = 816966
 
 list:
 	docker ps -a | grep ${NAME} || true
