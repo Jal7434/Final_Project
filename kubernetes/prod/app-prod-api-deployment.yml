@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-api-deployment
+  labels:
+    env: prod
+    app: app-prod-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-prod-api
+  template:
+    metadata:
+      labels:
+        app: app-prod-api
+    spec:
+      containers:
+        - name: app-prod-api
+          imagePullPolicy: Always
+          image: hannahmarques/ml_redis:latest  #from hw05
+          command: ['python3', 'flask_api.py']
+          ports:
+          - name: http
+            containerPort: 5000
+          env:
+          - name: REDIS_IP
+            value: 10.106.195.122  
