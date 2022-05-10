@@ -1,5 +1,5 @@
 NAME = hannahmarques
-APP = resources-redictions
+APP = resources-predictions
 VER=0.1
 RPORT=6418
 FPORT=5018
