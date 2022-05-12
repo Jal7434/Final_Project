@@ -78,3 +78,6 @@ def TOA_data():
     '''
     '''
     logging.info(f"TOA DATA")
+    
+if __name__ == '__main__':    
+   app.run(debug=True, host='0.0.0.0')
