@@ -47,6 +47,23 @@ def coverage_data():
 def domaiin_lists():
 
 
+@app.route('/referencing',methods = ['GET'])
+def reference_list():
+
+
+@app.route('/coordinates',methods = ['GET'])
+def coordinate_data():
+
+
+@app.route('/ranges',methods = ['GET'])
+def range_data():
+
+@app.route('/ALLSKY_SFC_LW_DWN',methods=['GET'])
+def all_sky_down():
+
+
+@app.route('/TOA_SW_DWN',methods = ['GET'])
+def TOA_data():
 
 
 
